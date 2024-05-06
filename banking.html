@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Own Banking System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <header class="text-5xl text-center my-10 font-semibold ">Let's Get some <span
+        class="text-purple-600">MONEEEEEEY</span> !!!!
+</header>
+<main>
+    <section class="w-3/4 mx-auto">
+        <div class="grid grid-cols-3 gap-5">
+            <div class="bg-blue-300 p-8 text-white rounded-xl">
+                <h3 class="text-2xl">Deposit</h3>
+                <h2 class="text-4xl font-semibold">$<span id="deposit-total">000</span></h2>
+            </div>
+            <div class="bg-yellow-300 p-8 text-white rounded-xl">
+                <h3 class="text-2xl">Withdraw</h3>
+                <h2 class="text-4xl font-semibold">$<span id="withdraw-total">000</span></h2>
+            </div>
+            <div class="bg-green-300 p-8 text-white rounded-xl">
+                <h3 class="text-2xl">Balance</h3>
+                <h2 class="text-4xl font-semibold">$<span id="balance-total">1500</span></h2>
+            </div>
+        </div>
+
+        <!-- deposite and withdraw ssecttion -->
+        <div class="grid grid-cols-2 gap-5 mt-8">
+            <!-- deposite section -->
+            <div class="space-y-5 bg-green-100 p-8  rounded-xl">
+                <h3 class="text-2xl">Please Deposit</h3>
+
+                <input id="deposit-input" class="w-3/4 block px-3 my-3 h-9 rounded border-slate-400 border-2"
+                    type="number" min="0" placeholder="$ Deposit Ammount" required>
+
+                    <p id="min-deposit-error" class="text-red-600 hidden">Minimum deposit up to 1</p>
+                    <p id="filled-deposit-error" class="text-red-600 hidden">Empty ammount not allowed</p>
+
+                <button id="deposit-button"
+                    class="bg-green-600 text-white rounded px-3 py-2 font-semibold">Deposit</button>
+                    
+            </div>
+
+            <!-- withdraw section -->
+            <div class="space-y-5 bg-red-100 p-8  rounded-xl">
+                <h3 class="text-2xl">Withdraw Ammmount</h3>
+
+                <input id="withdraw-input" class="w-3/4 block px-3 my-3 h-9 rounded border-slate-400 border-2"
+                    type="number" min="0" placeholder="$ Withdraw Ammount" required>
+
+                <h3 id="withdraw-input-error" class="text-1xl text-red-800"></h3>
+                
+                <button id="withdra-button"
+                    class="bg-red-600 text-white rounded px-3 py-2 font-semibold">Withdraw</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="./js/banking.js"></script>
+</body>
+</html>
