@@ -13,7 +13,7 @@ document.getElementById('submit-button').addEventListener('click',function(){
 
    if(email == "admin@gmail.com" && password == 123456) {
     document.getElementById('error').style.display ='none';
-    window.location.href = "../banking.html";
+    window.location.href = "banking.html"
 
    } else {
     document.getElementById('error').style.display ='block';
